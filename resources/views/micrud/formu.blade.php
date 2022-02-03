@@ -12,7 +12,7 @@
     <fieldset class="border p-2">
       <legend>Datos principales</legend>
       <div class="row align-items-start">
-        <div class="mb-3 col-md-6">
+        <div class="mb-3 col-6">
           <!-- Nombre de la empresa, texto, obligatorio -->
           <label for="nombre_emp" class="form-label">Nombre</label>
           <input class="form-control" name="nombre_emp" value="{!! old('nombre_emp') !!}" id="nombre_emp" required>
@@ -23,53 +23,21 @@
         </div>
 
         <!-- CIF de la empresa, texto, obligatorio -->
-        <div class="mb-3 col-md-3">
+        <div class="mb-3 col-auto">
           <label for="cif" class="form-label">CIF</label>
           <input class="form-control" name="cif" value="{{old('cif')}}" id="cif">
           {{$errors->first('cif')}}
         </div>
 
-      </div>
-
-      
-<!--       <div class="row align-items-start">
-        <div class="mb-3 col-md-6">
-          <label for="direccion_emp" class="form-label">Dirección</label>
-          <input class="form-control" name="direccion_emp" value="{{old('direccion_emp')}}" id="direccion_emp">
-        </div>
-  
-        <div class="mb-3 col-md-4">
-          <label for="poblacion_emp" class="form-label">Población</label>
-          <input class="form-control" name="poblacion_emp" value="{{old('poblacion_emp')}}" id="poblacion_emp">
-        </div>
-        
-        <div class="mb-3 col-md-2">
-          <label for="cp_emp" class="form-label">Código postal</label>
-          <input class="form-control" maxlength="5" name="cp_emp" value="{{old('cp_emp')}}" id="cp_emp" placeholder="07123">
-        </div>
-      </div> -->
-
-      <!-- Email, obligatorio -->
-      <div class="row align-items-start">
-        <!-- Email, email, obligatorio -->
-        <div class="mb-3 col-auto">
-          <label for="email_emp" class="form-label">E-mail</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input class="form-control" type="email" name="email_emp" value="{{old('email_emp')}}" id="email_emp" placeholder="name@example.com" aria-describedby="inputGroupPrepend">
-          </div>
-        </div>
-
-        <!-- Teléfono 1, obligatorio -->
         <div class="mb-3 col-auto">
           <label for="telefono1_emp" class="form-label">Teléfono 1</label>
           <input class="form-control" type="tel" maxlength="9" name="telefono1_emp" list="listatelefonos" value="{{old('telefono1_emp')}}" id="telefono1_emp"  placeholder="971 123 456">
         </div>
       </div>
 
-      <div class="form-control">
+      <div class="row align-items-start m-2">
         <h6 class="inline">Sector productivo</h6>
-        <div class="row ml-10">
+        <div class="row">
           <div class="form-check col-auto">
             <label class="form-check-label" for="id_primario">Primario</label>
             <input class="form-check-input" type="radio" name="sector" value="primario" {{ (old('sector') == "primario") ? "checked" :""}} id="id_primario">
@@ -120,11 +88,7 @@
             <input class="form-control" type="date" name="fecha_firma" value="{{old('fecha_firma')}}" id="fecha_firma">
         </div>
       </div>
-      
-      <form class="form-floating">
-        <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
-        <label for="floatingInputValue">Input with value</label>
-      </form>
+
     </fieldset>
 
     <button type="submit" class="btn btn-primary mt-2">Enviar</button>

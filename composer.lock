@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2be245d70a435cd672477a5c46451cb",
+    "content-hash": "ddb15abe5fd4fe7ab85c00d72d592986",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -363,6 +363,247 @@
                 }
             ],
             "time": "2022-01-12T08:27:12+00:00"
+        },
+        {
+            "name": "dragon-code/contracts",
+            "version": "v2.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheDragonCode/contracts.git",
+                "reference": "66908f9b5691ec87156521d4ad7b0dbb9ad08547"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheDragonCode/contracts/zipball/66908f9b5691ec87156521d4ad7b0dbb9ad08547",
+                "reference": "66908f9b5691ec87156521d4ad7b0dbb9ad08547",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-message": "^1.0.1",
+                "symfony/http-kernel": "^4.0 || ^5.0 || ^6.0",
+                "symfony/polyfill-php80": "^1.23"
+            },
+            "conflict": {
+                "andrey-helldar/contracts": "*"
+            },
+            "require-dev": {
+                "illuminate/database": "^8.0",
+                "phpdocumentor/reflection-docblock": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DragonCode\\Contracts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Helldar",
+                    "email": "helldar@ai-rus.com"
+                }
+            ],
+            "description": "A set of contracts for any project",
+            "keywords": [
+                "contracts",
+                "interfaces"
+            ],
+            "support": {
+                "source": "https://github.com/TheDragonCode/contracts"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/helldar",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://yoomoney.ru/to/410012608840929",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/dragon-code",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/andrey_helldar",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-01-20T12:16:15+00:00"
+        },
+        {
+            "name": "dragon-code/pretty-array",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheDragonCode/pretty-array.git",
+                "reference": "bc6629eb266e7869d540dd1fcf13e8c7e1c61e82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheDragonCode/pretty-array/zipball/bc6629eb266e7869d540dd1fcf13e8c7e1c61e82",
+                "reference": "bc6629eb266e7869d540dd1fcf13e8c7e1c61e82",
+                "shasum": ""
+            },
+            "require": {
+                "dragon-code/contracts": "^2.6",
+                "dragon-code/support": "^5.0",
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "php": "^7.3|^8.0"
+            },
+            "conflict": {
+                "andrey-helldar/pretty-array": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "symfony/thanks": "Give thanks (in the form of a GitHub) to your fellow PHP package maintainers"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DragonCode\\PrettyArray\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Helldar",
+                    "email": "helldar@ai-rus.com"
+                }
+            ],
+            "description": "Simple conversion of an array to a pretty view",
+            "keywords": [
+                "andrey helldar",
+                "array",
+                "dragon",
+                "dragon code",
+                "pretty",
+                "pretty array"
+            ],
+            "support": {
+                "issues": "https://github.com/TheDragonCode/pretty-array/issues",
+                "source": "https://github.com/TheDragonCode/pretty-array"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/helldar",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://yoomoney.ru/to/410012608840929",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/dragon-code",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/andrey_helldar",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-11-16T17:50:22+00:00"
+        },
+        {
+            "name": "dragon-code/support",
+            "version": "v5.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheDragonCode/support.git",
+                "reference": "38479ddf365ba4df9854b443a416503857ec41f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheDragonCode/support/zipball/38479ddf365ba4df9854b443a416503857ec41f7",
+                "reference": "38479ddf365ba4df9854b443a416503857ec41f7",
+                "shasum": ""
+            },
+            "require": {
+                "dragon-code/contracts": "^2.15",
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-message": "^1.0.1",
+                "symfony/deprecation-contracts": "^2.5 || ^3.0",
+                "voku/portable-ascii": "^1.4.8"
+            },
+            "conflict": {
+                "andrey-helldar/support": "*"
+            },
+            "require-dev": {
+                "ext-bcmath": "*",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "symfony/var-dumper": "^5.2 || ^6.0"
+            },
+            "suggest": {
+                "dragon-code/laravel-support": "Various helper files for the Laravel and Lumen frameworks",
+                "ext-bcmath": "Require the extension if you will be using DragonCode\\Support\\Facades\\Helpers\\Digit.",
+                "symfony/thanks": "Give thanks (in the form of a GitHub) to your fellow PHP package maintainers"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DragonCode\\Support\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Helldar",
+                    "email": "helldar@ai-rus.com"
+                }
+            ],
+            "description": "Support package is a collection of helpers and tools for any project.",
+            "keywords": [
+                "dragon",
+                "dragon-code",
+                "framework",
+                "helper",
+                "helpers",
+                "laravel",
+                "support",
+                "symfony",
+                "yii",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/TheDragonCode/support/issues",
+                "source": "https://github.com/TheDragonCode/support"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/helldar",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://yoomoney.ru/to/410012608840929",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/dragon-code",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/andrey_helldar",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-01-25T09:35:13+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -958,6 +1199,118 @@
                 }
             ],
             "time": "2021-10-06T17:43:30+00:00"
+        },
+        {
+            "name": "laravel-lang/publisher",
+            "version": "v12.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Lang/publisher.git",
+                "reference": "c22c3a7f26e31531fc8585fc8c550ecf2ffd564a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Lang/publisher/zipball/c22c3a7f26e31531fc8585fc8c550ecf2ffd564a",
+                "reference": "c22c3a7f26e31531fc8585fc8c550ecf2ffd564a",
+                "shasum": ""
+            },
+            "require": {
+                "dragon-code/contracts": "^2.15",
+                "dragon-code/pretty-array": "^3.0",
+                "dragon-code/support": "^5.6",
+                "ext-json": "*",
+                "illuminate/console": "^7.0 || ^8.0 || ^9.0",
+                "illuminate/contracts": "^7.0 || ^8.0 || ^9.0",
+                "illuminate/support": "^7.0 || ^8.0 || ^9.0",
+                "php": "^7.3 || ^8.0"
+            },
+            "conflict": {
+                "andrey-helldar/laravel-lang-publisher": "*",
+                "dragon-code/contracts": "<2.0.0",
+                "dragon-code/pretty-array": "<3.0.0",
+                "dragon-code/support": "<5.0.0",
+                "laravel-lang/lang": "<10.2.0"
+            },
+            "require-dev": {
+                "laravel-lang/http-statuses": "^2.0",
+                "laravel-lang/lang": "^10.2",
+                "orchestra/testbench": "^5.0 || ^6.0 || ^7.0",
+                "phpunit/phpunit": "^9.4",
+                "symfony/var-dumper": "^5.0 || ^6.0"
+            },
+            "suggest": {
+                "laravel-lang/http-statuses": "List of 78 languages for HTTP statuses",
+                "laravel-lang/lang": "List of 78 languages for Laravel Framework, Jetstream, Fortify, Breeze, Cashier, Nova, Spark and UI."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelLang\\Publisher\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelLang\\Publisher\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Helldar",
+                    "email": "helldar@ai-rus.com"
+                }
+            ],
+            "description": "Publisher lang files for the Laravel and Lumen Frameworks, Jetstream, Fortify, Cashier, Spark and Nova from Laravel-Lang/lang",
+            "keywords": [
+                "breeze",
+                "cashier",
+                "fortify",
+                "framework",
+                "i18n",
+                "jetstream",
+                "lang",
+                "languages",
+                "laravel",
+                "locale",
+                "locales",
+                "localization",
+                "lpm",
+                "lumen",
+                "nova",
+                "publisher",
+                "spark",
+                "trans",
+                "translations",
+                "validations"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Lang/publisher/issues",
+                "source": "https://github.com/Laravel-Lang/publisher"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/helldar",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://yoomoney.ru/to/410012608840929",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/dragon-code",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/andrey_helldar",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2022-01-21T20:39:45+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2847,6 +3200,83 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "s-ichikawa/laravel-sendgrid-driver",
+            "version": "3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/s-ichikawa/laravel-sendgrid-driver.git",
+                "reference": "55cddf5288cde0fdd49083bba9fe5a2023c59d8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/55cddf5288cde0fdd49083bba9fe5a2023c59d8f",
+                "reference": "55cddf5288cde0fdd49083bba9fe5a2023c59d8f",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "illuminate/mail": ">=7.0",
+                "illuminate/support": ">=7.0"
+            },
+            "require-dev": {
+                "illuminate/container": ">=7.0",
+                "illuminate/filesystem": ">=7.0",
+                "laravel/helpers": "^1.2",
+                "phpunit/phpunit": "^8.5",
+                "vlucas/phpdotenv": "^4.1 || ^5.2"
+            },
+            "suggest": {
+                "s-ichikawa/sendgrid-api-builder": "support to build json for sendgrid api"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sichikawa\\LaravelSendgridDriver\\SendgridTransportServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sichikawa\\LaravelSendgridDriver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "shingo.ichikawa",
+                    "email": "ichikawa.shingo.0829@gmail.com"
+                }
+            ],
+            "description": "This library adds a 'sendgrid' mail driver to Laravel.",
+            "keywords": [
+                "laravel",
+                "sendgrid"
+            ],
+            "support": {
+                "issues": "https://github.com/s-ichikawa/laravel-sendgrid-driver/issues",
+                "source": "https://github.com/s-ichikawa/laravel-sendgrid-driver/tree/3.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/[user1",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/s-ichikawa]# Replace with up to 4 GitHub Sponsors-enabled usernames e.g.",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/user2",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-06-06T15:18:57+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
