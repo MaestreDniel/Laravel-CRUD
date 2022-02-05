@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\DB;
 
-class PortfolioController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,14 +15,9 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolio = [
-            ['title' => 'Proyecto 1'],
-            ['title' => 'Proyecto 2'],
-            ['title' => 'Proyecto 3'],
-            ['title' => 'Proyecto 4'],
-        ];
-
-        return view('micrud.portfolio', compact('portfolio'));
+        return view('micrud.projects.index', [
+            'projects' => Project::latest()->get()
+        ]);
     }
 
     /**
@@ -50,9 +47,11 @@ class PortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Project $project)
     {
-        //
+        return view('micrud.projects.show', [
+            'project' => $project
+        ]);
     }
 
     /**

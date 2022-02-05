@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ContactoController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\App;
 
 /*
@@ -28,16 +28,18 @@ Route::group(['middleware' => 'auth'], function() {
     })->name('dashboard');
 
     Route::view('profile', 'profile')->name('profile');
-    Route::view('micrud.formu', 'micrud.formu')->name('formu');
+    Route::view('formu', 'micrud.formu')->name('formu');
     // App::setLocale('en');
-    Route::view('micrud.home', 'micrud.home', ['nombre' => 'Daniel Maestre'])->name('home');
+    Route::view('inicio', 'micrud.home', ['nombre' => 'Daniel Maestre'])->name('home');
     // Route::view('/', 'home')->name('home');
-    Route::view('micrud.dondeestamos', 'micrud.dondeestamos')->name('dondeestamos');
-    Route::view('micrud.quienessomos', 'micrud.quienessomos')->name('quienessomos');
-    Route::view('micrud.contacto', 'micrud.contacto')->name('contacto');
-    Route::get('micrud.portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+    Route::view('dondeestamos', 'micrud.dondeestamos')->name('dondeestamos');
+    Route::view('quienessomos', 'micrud.quienessomos')->name('quienessomos');
+    Route::view('contacto', 'micrud.contacto')->name('contacto');
+    Route::get('proyectos', [ProjectController::class, 'index'])->name('projects.index');
+    Route::get('proyectos/{project}', [ProjectController::class, 'show'])->name('projects.show');
+    Route::get('proyectos/crear', [ProjectController::class, 'create'])->name('projects.create');
 
-    Route::post('micrud.contacto', [ContactoController::class, 'store'])->name('contacto');
+    Route::post('contacto', [ContactoController::class, 'store'])->name('contacto.store');
 });
 
 
