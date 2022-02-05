@@ -4,6 +4,7 @@
 
 @section('content')
 <h2>Estás en proyectos</h2>
+<a href="{{ route('projects.create') }}"><button>Crea un proyecto nuevo</button></a><br><br>
 
 <table>
   @if($projects) {{-- Podríamos poner @isset para jugar con si la variable está definida o no --}}
