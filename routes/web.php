@@ -35,11 +35,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::view('dondeestamos', 'micrud.dondeestamos')->name('dondeestamos');
     Route::view('quienessomos', 'micrud.quienessomos')->name('quienessomos');
     Route::view('contacto', 'micrud.contacto')->name('contacto');
+    Route::post('contacto', [ContactoController::class, 'store'])->name('contacto.store');
     Route::get('proyectos', [ProjectController::class, 'index'])->name('projects.index');
     Route::get('proyectos/{project}', [ProjectController::class, 'show'])->name('projects.show');
     Route::get('proyectos/crear', [ProjectController::class, 'create'])->name('projects.create');
-
-    Route::post('contacto', [ContactoController::class, 'store'])->name('contacto.store');
 });
 
 
