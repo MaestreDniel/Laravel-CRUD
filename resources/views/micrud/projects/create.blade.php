@@ -5,14 +5,9 @@
 @section('content')
 <h2>Vamos a crear un proyecto nuevo</h2>
 
+@include('partials.validation-errors')
+
 <form method="POST" action="{{ route('projects.store') }}">
-  @csrf
-  <label for="title">Título del proyecto</label><br>
-  <input type="text" name="title"><br>
-  <label for="url">URL del proyecto</label><br>
-  <input type="text" name="url"><br>
-  <label for="description">Descripción del proyecto</label><br>
-  <textarea name="description"></textarea><br>
-  <button>Crea el proyecto</button>
+  @include('micrud.projects._form', ['btnText' => 'Crea el proyecto'])
 </form>
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SaveProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
@@ -27,7 +28,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('micrud.projects.create');
+        return view('micrud.projects.create', [
+            'project' => new Project
+        ]);
     }
 
     /**
@@ -36,15 +39,9 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(SaveProjectRequest $request)
     {
-        /* Project::create([
-            'title' => request('title'),
-            'url' => request('url'),
-            'description' => request('description'),
-        ]); */
-
-        Project::create(request()->all());
+        Project::create($request->validated()); // Validación para protegerse de asignación masiva, con form request
 
         return redirect()->route('projects.index');
     }
@@ -68,9 +65,11 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        return view('micrud.projects.edit', [
+            'project' => $project
+        ]);
     }
 
     /**
@@ -80,9 +79,11 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Project $project, SaveProjectRequest $request)
     {
-        //
+        $project->update($request->validated());
+
+        return redirect()->route('projects.show', $project);
     }
 
     /**
