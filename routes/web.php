@@ -38,14 +38,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::view('contacto', 'micrud.contacto')->name('contacto');
     Route::post('contacto', [ContactoController::class, 'store'])->name('contacto.store');
 
-    Route::get('proyectos', [ProjectController::class, 'index'])->name('projects.index');
-    Route::get('proyectos/crear', [ProjectController::class, 'create'])->name('projects.create');
-    Route::get('proyectos/{project}/editar', [ProjectController::class, 'edit'])->name('projects.edit');
-    Route::patch('proyectos/{project}', [ProjectController::class, 'update'])->name('projects.update');
-    Route::post('proyectos', [ProjectController::class, 'store'])->name('projects.store');
-    Route::get('proyectos/{project}', [ProjectController::class, 'show'])->name('projects.show');
-    Route::delete('proyectos/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+    Route::resource('proyectos', ProjectController::class)
+    ->names('projects')
+    ->parameters(['proyectos' => 'project']);
 });
-
-
-// Route::apiResource('projects', PortfolioController::class);
