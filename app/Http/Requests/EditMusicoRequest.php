@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class SaveMusicoRequest extends FormRequest
+class EditMusicoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,14 +24,16 @@ class SaveMusicoRequest extends FormRequest
      */
     public function rules()
     {
+        //$nombre = $this->request->get("nombre");
+
         return [
-            'nombre' => 'required|min:2|unique:musicos,nombre',
+            //'nombre' => ['required', Rule::unique('musicos')->ignore($nombre,'nombre')],
+            'nombre' => 'required|min:2',
             'categoria' => 'required',
             'salario' => 'required|size:4',
             'experiencia' => 'required',
             'descripcion' => 'required|min:10',
             'fecha' => 'required',
-            'imagen' => 'required|mimes:png,jpg'
         ];
     }
 

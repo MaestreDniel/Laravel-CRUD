@@ -73,7 +73,7 @@
 
     <div class="mb-3">
       <label for="formFile" class="form-label">{{ __('Upload a photo') }}</label>
-      <input name="imagen" class="form-control" type="file" value="{{old('imagen', $musico->imagen)}}" id="formFile" required>
+      <input name="imagen" class="form-control" type="file" value="{{old('imagen', $musico->imagen)}}" id="formFile">
       <div class='text-danger'>{!! $errors->first('imagen', '<small>:message</small>') !!}</div>  
     </div>
 

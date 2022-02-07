@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EditMusicoRequest;
 use App\Http\Requests\SaveMusicoRequest;
 use App\Models\Musico;
 use Illuminate\Http\Request;
@@ -83,7 +84,7 @@ class MusicoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Musico $musico, SaveMusicoRequest $request)
+    public function update(Musico $musico, EditMusicoRequest $request)
     {
         $musico->update($request->validated());
 
