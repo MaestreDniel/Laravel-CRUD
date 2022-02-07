@@ -21,7 +21,7 @@
     </div>
 
     <div class="mb-3 col-md-4">
-      <label for="salario" class="form-label">{{ __('Salary') }}</label>
+      <label for="salario" class="form-label">@lang('Salary')</label>
       <input class="form-control" type="number" min="1" name="salario" value="{{old('salario', $musico->salario)}}" id="salario" required>
       <div class='text-danger'>{!! $errors->first('salario', '<small>:message</small>') !!}</div>  
     </div>
@@ -34,7 +34,7 @@
           <input class="form-check-input" type="radio" name="experiencia" value="principiante" {{ (old('experiencia', $musico->experiencia) == "principiante") ? "checked" :""}} id="principiante">
         </div>
         <div class="form-check col-auto">
-          <label class="form-check-label" for="intermedio">{{ __('Intermediate') }}</label>
+          <label class="form-check-label" for="intermedio">@lang('Intermediate')</label>
           <input class="form-check-input" type="radio" name="experiencia" value="intermedio" {{ (old('experiencia', $musico->experiencia) == "intermedio") ? "checked" : ""}} id="intermedio">
         </div>
         <div class="form-check col-auto">
@@ -46,7 +46,7 @@
     </div>
 
     <div class="mb-3 col-md-4">
-      <h6 class="inline">{{ __('Instruments') }}</h6>
+      <h6 class="inline">@lang('Instruments')</h6>
       <input type="checkbox" id="instrumento1" name="instrumento1" value="Guitarra">
       <label for="instrumento1">{{ __('Guitar') }}</label><br>
       <input type="checkbox" id="instrumento2" name="instrumento2" value="Bajo">
@@ -65,7 +65,7 @@
 
     <div class="row">
       <div class="mb-3 col-md-4">
-        <label for="fecha" class="form-label">{{ __('When did you start playing?') }}</label>
+        <label for="fecha" class="form-label">@lang('When did you start playing?')</label>
         <input class="form-control" type="date" name="fecha" value="{{old('fecha', $musico->fecha)}}" id="fecha" required>
         <div class='text-danger'>{!! $errors->first('fecha', '<small>:message</small>') !!}</div>  
       </div>

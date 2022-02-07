@@ -24,12 +24,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
 
-    Route::view('profile', 'profile')->name('profile');
-    Route::view('formu', 'micrud.formu')->name('formu');
-    Route::view('inicio', 'micrud.home')->name('home');
+Route::view('formu', 'micrud.formu')->name('formu');
+Route::view('inicio', 'micrud.home')->name('home');
 
-    Route::resource('musicos', MusicoController::class)
+Route::resource('musicos', MusicoController::class)
     ->names('musicos')
     ->parameters(['musicos' => 'musico']);
+
+Route::fallback(function() {
+    return view('/micrud.home');
 });
