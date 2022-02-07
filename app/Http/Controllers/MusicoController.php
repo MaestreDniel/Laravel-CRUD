@@ -40,6 +40,7 @@ class MusicoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+   
     public function store(SaveMusicoRequest $request)
     {
         $musico = New Musico($request->validated());

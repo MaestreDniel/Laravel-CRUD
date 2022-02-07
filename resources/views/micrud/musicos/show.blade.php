@@ -12,12 +12,11 @@
     @endif
     <div class="card-body">
       <h5 class="card-title">{{ $musico->nombre }}</h5>
-      <p class="card-text">{{ $musico->descripcion }}</p>
       <div class="card-text">Descripción: {{ $musico->descripcion }}</div>
       <div class="card-text">Tipo de músico: {{ $musico->categoria }}</div>
       <div class="card-text">Salario: {{ $musico->salario }}</div>
       <div class="card-text">Nivel de experiencia: {{ $musico->experiencia }}</div>
-      <div class="card-text">Instrumentos: {{ $musico->instrumento1 }} {{ $musico->instrumento2 }} {{ $musico->instrumento3 }} {{ $musico->instrumento4 }}</div>
+      {{-- <div class="card-text">Instrumentos: {{ $musico->instrumento1 }} {{ $musico->instrumento2 }} {{ $musico->instrumento3 }} {{ $musico->instrumento4 }}</div> --}}
       <div class="card-text">Empezó a tocar en: {{ $musico->fecha }}</div><br>
       <p class="card-text">Registrado {{ $musico->created_at->diffForHumans() }}</p>
       <p class="card-text">Editado {{ $musico->updated_at->diffForHumans() }}</p>
