@@ -24,15 +24,18 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});
 
-Route::view('formu', 'micrud.formu')->name('formu');
-Route::view('inicio', 'micrud.home')->name('home');
+    /* Todas estas rutas están dentro del group de middleware auth para que solo sean accesibles 
+    si el usuario está logueado */
 
-Route::resource('musicos', MusicoController::class)
-    ->names('musicos')
-    ->parameters(['musicos' => 'musico']);
+    Route::view('formu', 'micrud.formu')->name('formu');
+    Route::view('inicio', 'micrud.home')->name('home');
 
-Route::fallback(function() {
-    return view('/micrud.home');
+    Route::resource('musicos', MusicoController::class)
+        ->names('musicos')
+        ->parameters(['musicos' => 'musico']);
+
+    Route::fallback(function() {
+        return view('/micrud.home');
+    });
 });
